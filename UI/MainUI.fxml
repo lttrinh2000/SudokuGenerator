@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="778.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <AnchorPane fx:id="tfContainer" layoutX="37.0" layoutY="92.0">
+         <children>
+            <TextField alignment="CENTER" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="70.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="140.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="228.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="298.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="368.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="70.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="140.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="227.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="297.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="367.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="455.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="525.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="456.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="526.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="596.0" layoutY="595.0" prefHeight="70.0" prefWidth="70.0">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="27.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="bttContainer" layoutX="61.0" layoutY="21.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Reset">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="228.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Solve Puzzle">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="456.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Generate Puzzle">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
