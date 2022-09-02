@@ -1,4 +1,8 @@
+import Mechanics.*;
+import UI.*;
 import java.util.Random;
+
+import Mechanics.GeneratePuzzle;
 
 public class Driver
 {
@@ -10,6 +14,8 @@ public class Driver
 
         puzzle.solve(randomVal);
         puzzle.hideSolution();
+        game.printBoard();
+        puzzle.solve(randomVal);
         game.printBoard();
     }
 }
