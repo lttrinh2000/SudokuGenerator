@@ -1,5 +1,7 @@
 package Mechanics;
+
 import java.util.Random;
+import javafx.scene.control.TextField;
 
 public class GeneratePuzzle {
     SudokuBoard obj;
@@ -36,7 +38,7 @@ public class GeneratePuzzle {
 		return true;
 	}
 
-	public boolean solve(Random randomVal) {
+	public boolean solve(Random randomVal, TextField[][] boardUI) {
 		int[] pos = obj.findEmpty();
 		if (pos.length == 0)
 			return true;
@@ -46,12 +48,13 @@ public class GeneratePuzzle {
 				int val = randomVal.nextInt(9) + 1;
 				if ( validNum( val, pos[0], pos[1]) ) {
 					board[pos[0]][pos[1]] = val;
-
-					if ( solve(randomVal) )
+					boardUI[pos[0]][pos[1]].setText(String.valueOf(val));
+					if ( solve(randomVal, boardUI) )
 						return true;
 
 				}
 				board[pos[0]][pos[1]] = 0;
+				boardUI[pos[0]][pos[1]].setText(String.valueOf(0));
 			}
 		}
 

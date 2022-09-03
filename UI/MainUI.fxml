@@ -422,17 +422,17 @@
       </AnchorPane>
       <AnchorPane fx:id="bttContainer" layoutX="61.0" layoutY="21.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Reset">
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButton" prefHeight="54.0" prefWidth="162.0" text="Reset">
                <font>
                   <Font name="Georgia" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="228.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Solve Puzzle">
+            <Button fx:id="solveButton" layoutX="228.0" mnemonicParsing="false" onAction="#solveButton" prefHeight="54.0" prefWidth="162.0" text="Solve Puzzle">
                <font>
                   <Font name="Georgia" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="456.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" text="Generate Puzzle">
+            <Button fx:id="generateButton" layoutX="456.0" mnemonicParsing="false" onAction="#generateButton" prefHeight="54.0" prefWidth="162.0" text="Generate Puzzle">
                <font>
                   <Font name="Georgia" size="18.0" />
                </font>

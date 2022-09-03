@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -19,40 +19,74 @@ public class boardUIController implements Initializable{
     AnchorPane tfContainer;
 
     List<TextField> inputList = new ArrayList<>();
+    TextField[][] tfArray = new TextField[9][9];
+    int[][] hidenSolBoard;
+    Random randomVal = new Random();
 
-    public void addAllChilds(AnchorPane container) {
+    public void copyOriginalBoard( int[][] board ) {
+        hidenSolBoard = board;
+    }
+
+    public TextField[][] addAllChilds(AnchorPane container) {
         for (Node child : container.getChildren()) {
             if (child instanceof TextField)
                 inputList.add( (TextField)child );
         }
+
+        int tf = 0;
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<9; j++) {
+                tfArray[i][j] = inputList.get(tf);
+                tf++;
+            }
+        }
+
+        return tfArray;
     }
 
     public void setValueToBoard( int[][] board ) {
 
-        // Convert 2D array into 1D array
-        int[] valArray = Stream.of(board) //we start with a stream of objects Stream<int[]>
-                    .flatMapToInt(IntStream::of) //we I'll map each int[] to IntStream
-                    .toArray();
-
-        for (int i=0; i < inputList.size(); i++) {
-            TextField t = inputList.get(i);
-            t.setText( String.valueOf(valArray[i]) );
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<9; j++) {
+                tfArray[i][j].setText(String.valueOf(board[i][j]));
+            }
         }
+    }
+
+    public SudokuBoard createGame() {
+        TextField[][] boardUI = addAllChilds(tfContainer);
+        SudokuBoard game = new SudokuBoard();
+        GeneratePuzzle puzzle = new GeneratePuzzle(game);
+
+        puzzle.solve(randomVal, boardUI);
+        game.printBoard();
+        puzzle.hideSolution();
+
+        int[][] board = game.getBoard();
+        copyOriginalBoard(board);
+        setValueToBoard(board);
+
+        return game;
+    }
+
+    public void resetButton( ActionEvent e ) {
+        setValueToBoard(hidenSolBoard);
+    }
+
+    public void generateButton( ActionEvent e ) {
+        createGame();
+    }
+
+    public void solveButton( ActionEvent e ) {
+
+        SudokuBoard existGame = new SudokuBoard(hidenSolBoard);
+        GeneratePuzzle revealSol = new GeneratePuzzle(existGame);
+        revealSol.solve(randomVal, tfArray);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        addAllChilds(tfContainer);
-        SudokuBoard game = new SudokuBoard();
-        GeneratePuzzle puzzle = new GeneratePuzzle(game);
-        Random randomVal = new Random();
-
-        puzzle.solve(randomVal);
-        puzzle.hideSolution();
-
-        int[][] board = game.getBoard();
-        setValueToBoard(board);
-        
+        createGame();
     }
     
 }

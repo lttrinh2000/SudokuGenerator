@@ -11,6 +11,10 @@ public class SudokuBoard {
     			Arrays.fill(row, 0);
 	}
 
+	public SudokuBoard(int[][] existBoard) {
+		board = existBoard;
+	}
+
 	public int[][] getBoard() {
 		return board;
 	}
