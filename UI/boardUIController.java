@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,14 +16,14 @@ import javafx.scene.layout.AnchorPane;
 public class boardUIController implements Initializable{
     @FXML
     AnchorPane tfContainer;
-
+    TextField[][] boardUI;
     List<TextField> inputList = new ArrayList<>();
     TextField[][] tfArray = new TextField[9][9];
-    int[][] hidenSolBoard;
+    SudokuBoard existGame;
     Random randomVal = new Random();
 
-    public void copyOriginalBoard( int[][] board ) {
-        hidenSolBoard = board;
+    public void copyOriginalBoard( SudokuBoard game ) {
+        existGame = game;
     }
 
     public TextField[][] addAllChilds(AnchorPane container) {
@@ -44,44 +43,57 @@ public class boardUIController implements Initializable{
         return tfArray;
     }
 
-    public void setValueToBoard( int[][] board ) {
+    public void setValueToBoardUI( int[][] board ) {
+        new Thread(() -> {
+                for (int i=0; i<9; i++) {
+                    for (int j=0; j<9; j++) {
+                        TextField text = tfArray[i][j];
+                        if (board[i][j] != 0) {
+                            try {
+                                text.clear();
+                                text.setText(String.valueOf(board[i][j]));
 
-        for (int i=0; i<9; i++) {
-            for (int j=0; j<9; j++) {
-                tfArray[i][j].setText(String.valueOf(board[i][j]));
-            }
-        }
+                                Thread.sleep(100);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        else
+                            text.setText("");
+                    }
+                }
+        }).start();
     }
 
-    public SudokuBoard createGame() {
-        TextField[][] boardUI = addAllChilds(tfContainer);
+    public void createGame() {
+        boardUI = addAllChilds(tfContainer);
         SudokuBoard game = new SudokuBoard();
         GeneratePuzzle puzzle = new GeneratePuzzle(game);
 
-        puzzle.solve(randomVal, boardUI);
-        game.printBoard();
+        puzzle.solve(randomVal);
         puzzle.hideSolution();
-
-        int[][] board = game.getBoard();
-        copyOriginalBoard(board);
-        setValueToBoard(board);
-
-        return game;
+        game.printBoard();
+        copyOriginalBoard(game);
+        setValueToBoardUI(game.getBoard());
     }
 
     public void resetButton( ActionEvent e ) {
-        setValueToBoard(hidenSolBoard);
+        setValueToBoardUI(existGame.getBoard());
     }
 
     public void generateButton( ActionEvent e ) {
         createGame();
     }
 
-    public void solveButton( ActionEvent e ) {
+    public void solveButton( ActionEvent e ) throws InterruptedException {
+        GeneratePuzzle solution = new GeneratePuzzle(existGame);
+        while (true) {
+            if ( solution.solve(randomVal) )
+                break;
+        }
+        setValueToBoardUI(existGame.getBoard());
+        existGame.printBoard();
 
-        SudokuBoard existGame = new SudokuBoard(hidenSolBoard);
-        GeneratePuzzle revealSol = new GeneratePuzzle(existGame);
-        revealSol.solve(randomVal, tfArray);
     }
 
     @Override
