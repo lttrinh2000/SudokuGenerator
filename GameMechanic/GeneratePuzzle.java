@@ -1,14 +1,14 @@
 package GameMechanic;
 
 import java.util.Random;
-import javafx.animation.PauseTransition;
-import javafx.application.Platform;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
 public class GeneratePuzzle {
-    SudokuBoard obj;
-    int[][] board;
+    private SudokuBoard obj;
+    private int[][] board;
 
     public GeneratePuzzle(SudokuBoard game) {
         obj = game;
@@ -42,13 +42,15 @@ public class GeneratePuzzle {
 	}
 
 	public void updateUI(TextField[][] boardUI, int x, int y, String val){	
-		Platform.runLater(new Runnable() {
-			@Override public void run() {
-				PauseTransition pause = new PauseTransition(Duration.millis(30));
-				pause.setOnFinished(event -> boardUI[x][y].setText(val));
-				pause.play();
-			}
-		});
+
+		Timeline timer = new Timeline(new KeyFrame(
+            Duration.millis(10),
+				event -> {
+					boardUI[x][y].setText(val);
+				}
+			));
+			
+			timer.play();
     }
 
 	public boolean solve(Random randomVal, TextField[][] boardUI, boolean changeUI) {
@@ -62,15 +64,15 @@ public class GeneratePuzzle {
 
 					if ( validNum( val, pos[0], pos[1]) ) {
 						board[pos[0]][pos[1]] = val;
-						if (changeUI == true)
-							updateUI(boardUI, pos[0], pos[1], String.valueOf(val));
+						/*if (changeUI == true)
+							updateUI(boardUI, pos[0], pos[1], String.valueOf(val));*/
 						if ( solve(randomVal, boardUI, changeUI) )
 							return true;
 
 					}
 					board[pos[0]][pos[1]] = 0;
-					//if (changeUI == true)
-						//updateUI(boardUI, pos[0], pos[1], "");
+					/*if (changeUI == true)
+							updateUI(boardUI, pos[0], pos[1], "");*/
 				}
 		}
 

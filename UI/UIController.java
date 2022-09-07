@@ -1,26 +1,30 @@
 package UI;
+import GameMechanic.*;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
-
-import GameMechanic.*;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
+
 
 public class UIController implements Initializable{
     @FXML
-    AnchorPane tfContainer;
-    TextField[][] boardUI;
-    List<TextField> inputList = new ArrayList<>();
-    TextField[][] tfArray = new TextField[9][9];
-    SudokuBoard existGame;
-    Random randomVal = new Random();
+    private AnchorPane tfContainer;
+    private TextField[][] boardUI;
+    private List<TextField> inputList = new ArrayList<>();
+    private TextField[][] tfArray = new TextField[9][9];
+    private SudokuBoard existGame;
+    private Random randomVal = new Random();
 
     public void copyOriginalBoard( SudokuBoard game ) {
         existGame = game;
@@ -44,25 +48,26 @@ public class UIController implements Initializable{
     }
 
     public void setValueToBoardUI( int[][] board ) {
-        new Thread(() -> {
+        Timeline timer = new Timeline(new KeyFrame(
+            Duration.millis(1),
+            event -> {
                 for (int i=0; i<9; i++) {
                     for (int j=0; j<9; j++) {
                         TextField text = tfArray[i][j];
+                        
                         if (board[i][j] != 0) {
-                            try {
-                                text.clear();
-                                text.setText(String.valueOf(board[i][j]));
-
-                                Thread.sleep(50);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
+                            text.clear();
+                            text.setText(String.valueOf(board[i][j]));
+                            text.setDisable(true);
                         }
                         else
                             text.setText("");
                     }
                 }
-        }).start();
+            }
+        ));
+        
+        timer.play();
     }
 
 
@@ -78,11 +83,26 @@ public class UIController implements Initializable{
         setValueToBoardUI(game.getBoard());
     }
 
+    public void textFieldInput( ActionEvent e ) {
+        TextField tf = (TextField)e.getTarget();
+        int val = Integer.valueOf(tf.getText());
+
+        if (val >=1 && val <=9) {
+
+        }
+    }
+
     public void resetButton( ActionEvent e ) {
+        existGame.printBoard();
         setValueToBoardUI(existGame.getBoard());
     }
 
     public void generateButton( ActionEvent e ) {
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<9; j++) {
+                tfArray[i][j].setDisable(false);
+            }
+        }
         createGame();
     }
 
@@ -92,7 +112,7 @@ public class UIController implements Initializable{
             if ( solution.solve(randomVal, boardUI, true) )
                 break;
         }
- 
+        setValueToBoardUI(existGame.getBoard());
         existGame.printBoard();
 
     }

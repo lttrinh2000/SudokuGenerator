@@ -13,7 +13,7 @@
    <children>
       <AnchorPane fx:id="tfContainer" layoutX="37.0" layoutY="92.0">
          <children>
-            <TextField alignment="CENTER" prefHeight="70.0" prefWidth="70.0">
+            <TextField alignment="CENTER" onAction="#textFieldInput" prefHeight="70.0" prefWidth="70.0">
                <font>
                   <Font name="Lucida Handwriting Italic" size="27.0" />
                </font>

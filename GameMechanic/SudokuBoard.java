@@ -1,4 +1,5 @@
 package GameMechanic;
+
 import java.util.Arrays;
 
 public class SudokuBoard {
@@ -31,7 +32,7 @@ public class SudokuBoard {
 			System.out.print("\n");
 		}
 
-		System.out.print("\n");
+		System.out.println("=======================");
 	}
 
 	public int[] findEmpty() {
