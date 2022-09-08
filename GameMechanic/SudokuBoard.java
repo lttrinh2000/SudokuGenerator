@@ -20,6 +20,15 @@ public class SudokuBoard {
 		return board;
 	}
 
+	public void setValToBoard(int val, int x, int y) {
+		if (val >= 1 && val <= 9 && x >= 0 && x <= 8 && y >= 0 && y <= 8) {
+			board[x][y] = val;
+		}
+		else {
+			System.out.println("Assign value fail at index " + x + " " + y);
+		}
+	}
+
 	public void printBoard() {
 		for (int i=0; i<9; i++) {
 			if ( i % 3 == 0 && i != 0)

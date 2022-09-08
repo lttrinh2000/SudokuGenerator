@@ -1,21 +1,19 @@
 package GameMechanic;
 
 import java.util.Random;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.scene.control.TextField;
-import javafx.util.Duration;
 
 public class GeneratePuzzle {
     private SudokuBoard obj;
     private int[][] board;
+
+	public GeneratePuzzle() {}
 
     public GeneratePuzzle(SudokuBoard game) {
         obj = game;
         board = game.getBoard();
     }
 
-    public boolean validNum( int val, int row, int col) {
+    public boolean validNum(int[][] board, int val, int row, int col) {
 
 		for (int m=0; m < 9; m++) {
 			if ( val == board[row][m] )
@@ -41,19 +39,7 @@ public class GeneratePuzzle {
 		return true;
 	}
 
-	public void updateUI(TextField[][] boardUI, int x, int y, String val){	
-
-		Timeline timer = new Timeline(new KeyFrame(
-            Duration.millis(10),
-				event -> {
-					boardUI[x][y].setText(val);
-				}
-			));
-			
-			timer.play();
-    }
-
-	public boolean solve(Random randomVal, TextField[][] boardUI, boolean changeUI) {
+	public boolean solve( int[][] board, Random randomVal) {
 		int[] pos = obj.findEmpty();
 		if (pos.length == 0)
 			return true;
@@ -62,17 +48,14 @@ public class GeneratePuzzle {
 				for (int i=1; i<10; i++) {
 					int val = randomVal.nextInt(9) + 1;
 
-					if ( validNum( val, pos[0], pos[1]) ) {
+					if ( validNum( board, val, pos[0], pos[1]) ) {
 						board[pos[0]][pos[1]] = val;
-						/*if (changeUI == true)
-							updateUI(boardUI, pos[0], pos[1], String.valueOf(val));*/
-						if ( solve(randomVal, boardUI, changeUI) )
+
+						if ( solve(board, randomVal) )
 							return true;
 
 					}
 					board[pos[0]][pos[1]] = 0;
-					/*if (changeUI == true)
-							updateUI(boardUI, pos[0], pos[1], "");*/
 				}
 		}
 
