@@ -4,12 +4,15 @@ import java.util.Arrays;
 
 public class SudokuBoard {
 	public int[][] board;
+	public int[][] originalBoard;
 
 	public SudokuBoard() {
 		board = new int[9][9];
 
 		for (int[] row: board)
     			Arrays.fill(row, 0);
+		
+		originalBoard = board;
 	}
 
 	public SudokuBoard(int[][] existBoard) {
@@ -18,6 +21,10 @@ public class SudokuBoard {
 
 	public int[][] getBoard() {
 		return board;
+	}
+
+	public int[][] getOriginalBoard() {
+		return originalBoard;
 	}
 
 	public void setValToBoard(int val, int x, int y) {

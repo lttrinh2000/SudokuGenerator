@@ -16,6 +16,11 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
@@ -68,6 +73,7 @@ public class UIController implements Initializable{
                         }
                         else
                             text.setText("");
+                            updateUI("Generated New Puzzle", text, Color.BLACK);
                     }
                 }
             }
@@ -76,12 +82,13 @@ public class UIController implements Initializable{
         timer.play();
     }
 
-    public void updateLabel(String res,  Color c) {
+    public void updateUI(String res, TextField tf,  Color c) {
         Timeline timer = new Timeline(new KeyFrame(
             Duration.millis(1),
             event -> {
                     announcement.setTextFill(c);
                     announcement.setText(res);
+                    tf.setBorder( new Border(new BorderStroke(c, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)) );
             }
         ));
             
@@ -123,14 +130,14 @@ public class UIController implements Initializable{
         if (val >=1 && val <=9) {
             if ( checkInputValid.validNum(board, val, x, y) ) {
                 existGame.setValToBoard(val, x, y);
-                updateLabel("Number is valid", Color.GREEN);
+                updateUI("Number is valid", tf, Color.GREEN);
             }
             else {
-                updateLabel("Number is violate Sudoku rule", Color.RED);
+                updateUI("Number is violate Sudoku rule", tf, Color.RED);
             }
         }
         else {
-            updateLabel("Please enter number from 1 to 9", Color.RED);
+            updateUI("Please enter number from 1 to 9", tf, Color.RED);
         }
     }
 
@@ -142,22 +149,23 @@ public class UIController implements Initializable{
     public void generateButton( ActionEvent e ) {
         for (int i=0; i<9; i++) {
             for (int j=0; j<9; j++) {
-                tfArray[i][j].setDisable(false);
+                TextField tf = tfArray[i][j];
+                tf.setDisable(false);
             }
         }
         createGame();
     }
 
-    public void solveButton( ActionEvent e ) throws InterruptedException {
+    public void solveButton( ActionEvent e ) {
         GeneratePuzzle solution = new GeneratePuzzle(existGame);
         
-        int[][] board = existGame.getBoard();
+        int[][] board = existGame.getOriginalBoard();
         
         while (true) {
             if ( solution.solve(board, randomVal) )
                 break;
         }
-        setValueToBoardUI(existGame.getBoard());
+        setValueToBoardUI(board);
         existGame.printBoard();
 
     }
