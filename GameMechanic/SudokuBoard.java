@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class SudokuBoard {
 	public int[][] board;
-	public int[][] originalBoard;
 
 	public SudokuBoard() {
 		board = new int[9][9];
@@ -12,7 +11,6 @@ public class SudokuBoard {
 		for (int[] row: board)
     			Arrays.fill(row, 0);
 		
-		originalBoard = board;
 	}
 
 	public SudokuBoard(int[][] existBoard) {
@@ -21,10 +19,6 @@ public class SudokuBoard {
 
 	public int[][] getBoard() {
 		return board;
-	}
-
-	public int[][] getOriginalBoard() {
-		return originalBoard;
 	}
 
 	public void setValToBoard(int val, int x, int y) {
@@ -51,7 +45,7 @@ public class SudokuBoard {
 		System.out.println("=======================");
 	}
 
-	public int[] findEmpty() {
+	public int[] findEmpty(int[][] board) {
 		for (int i=0; i<9; i++) {
 			for (int j=0; j<9; j++) {
 				if (board[i][j] == 0)

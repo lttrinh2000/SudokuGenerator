@@ -40,7 +40,7 @@ public class GeneratePuzzle {
 	}
 
 	public boolean solve( int[][] board, Random randomVal) {
-		int[] pos = obj.findEmpty();
+		int[] pos = obj.findEmpty(board);
 		if (pos.length == 0)
 			return true;
 

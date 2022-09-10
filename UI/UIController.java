@@ -34,10 +34,18 @@ public class UIController implements Initializable{
     private List<TextField> inputList = new ArrayList<>();
     private TextField[][] tfArray = new TextField[9][9];
     private SudokuBoard existGame;
+    private int[][] originalBoard = new int[9][9];
     private Random randomVal = new Random();
 
     public void copyOriginalBoard( SudokuBoard game ) {
         existGame = game;
+        int[][] board = game.getBoard();
+
+		for (int i=0; i<9; i++) {
+			for (int j=0; j<9; j++) {
+				originalBoard[i][j] = board[i][j];
+			}
+		}
     }
 
     public TextField[][] addAllChilds(AnchorPane container) {
@@ -158,16 +166,13 @@ public class UIController implements Initializable{
 
     public void solveButton( ActionEvent e ) {
         GeneratePuzzle solution = new GeneratePuzzle(existGame);
-        
-        int[][] board = existGame.getOriginalBoard();
-        
+
         while (true) {
-            if ( solution.solve(board, randomVal) )
+            if ( solution.solve(originalBoard, randomVal) )
                 break;
         }
-        setValueToBoardUI(board);
-        existGame.printBoard();
-
+        setValueToBoardUI(originalBoard);
+        
     }
 
     @Override
