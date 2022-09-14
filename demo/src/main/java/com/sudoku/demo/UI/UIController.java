@@ -1,5 +1,5 @@
-package UI;
-import GameMechanic.*;
+package com.sudoku.demo.UI;
+import com.sudoku.demo.GameMechanic.*;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -150,8 +150,12 @@ public class UIController implements Initializable{
     }
 
     public void resetButton( ActionEvent e ) {
-        existGame.printBoard();
-        setValueToBoardUI(existGame.getBoard());
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<9; j++) {
+                existGame.setValToBoard(originalBoard[i][j], i, j);
+            }
+        }
+        setValueToBoardUI(originalBoard);
     }
 
     public void generateButton( ActionEvent e ) {

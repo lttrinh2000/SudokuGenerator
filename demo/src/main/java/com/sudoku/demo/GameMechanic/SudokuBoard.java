@@ -1,4 +1,4 @@
-package GameMechanic;
+package com.sudoku.demo.GameMechanic;
 
 import java.util.Arrays;
 

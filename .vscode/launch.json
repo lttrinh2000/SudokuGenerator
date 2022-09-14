@@ -6,10 +6,31 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DemoApplication",
+            "request": "launch",
+            "mainClass": "com.sudoku.demo.DemoApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.sudoku.demo.Main",
+            "projectName": "demo",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-18.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "SudokuSolver_2faa9683",
+            "projectName": "SudokuGenerator_47fb8e63",
             "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-18.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
